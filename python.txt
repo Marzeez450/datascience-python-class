@@ -1,0 +1,154 @@
+&	AND	Sets bit to 1 if both bits are 1	5 & 3 → 1
+`	`	OR	Sets bit to 1 if at least one bit is 1
+^	XOR	Sets bit to 1 if only one of the bits is 1	5 ^ 3 → 6
+~	NOT	Inverts all bits (two's complement)	~5 → -6
+<<	Left Shift	Shifts bits left by n places (multiply by 2^n)	5 << 1 → 10
+>>	Right Shift	Shifts bits right by n places (divide by 2^n)	5 >> 1 → 2
+
+
+It performs a bitwise AND operation, which compares corresponding bits of two numbers and returns 1 
+if both bits are 1, otherwise, it returns 0.
+
+Bitwise AND (&) Explanation
+The bitwise AND operator works at the binary level:
+
+A	B	A & B
+0	0	0
+0	1	0
+1	0	0
+1	1	1
+
+
+
+
+1. Bitwise OR (|)
+The | (bitwise OR) operator compares each bit of two numbers and returns 1 
+if at least one of the corresponding bits is 1, otherwise, it returns 0.
+
+
+A	B	A | B
+0	0	0
+0	1	1
+1	0	1
+1	1	1
+
+
+2. Bitwise XOR (^)
+The ^ (bitwise XOR) operator returns 1 if the corresponding bits of 
+the two numbers are different, otherwise, it returns 0.
+
+A	B	A ^ B
+0	0	0
+0	1	1
+1	0	1
+1	1	0
+
+
+3. Bitwise NOT (~)
+The ~ (bitwise NOT) operator inverts all bits:
+
+1 becomes 0, and 0 becomes 1.
+Python represents negative numbers using two's complement, so ~x = -(x + 1).
+
+
+Example
+python
+Copy
+Edit
+a = 5  # 101 in binary
+result = ~a  # Bitwise NOT
+print(result)  # Output: -6
+How It Works
+yaml
+Copy
+Edit
+   0000 0101  (5 in binary)
+~  1111 1010  (-6 in binary, two's complement)
+In two's complement, ~5 = -(5 + 1) = -6.
+
+
+
+4. Left Shift (<<)
+The << (left shift) operator shifts bits to the left and adds zeros on the right.
+Each shift multiplies the number by 2.
+
+Example
+python
+Copy
+Edit
+a = 5  # 101 in binary
+result = a << 1  # Shift left by 1
+print(result)  # Output: 10
+How It Works
+markdown
+Copy
+Edit
+   101  (5 in binary)
+<< 1
+------------
+  1010  (10 in binary)
+So, 5 << 1 = 10.
+
+🔹 Formula: a << n → Multiplies by 2^n
+
+python
+Copy
+Edit
+print(5 << 2)  # 5 * 2^2 = 20
+5. Right Shift (>>)
+The >> (right shift) operator shifts bits to the right, discarding bits, and dividing by 2.
+
+Example
+python
+Copy
+Edit
+a = 5  # 101 in binary
+result = a >> 1  # Shift right by 1
+print(result)  # Output: 2
+How It Works
+markdown
+Copy
+Edit
+   101  (5 in binary)
+>> 1
+------------
+   10  (2 in binary)
+So, 5 >> 1 = 2.
+
+🔹 Formula: a >> n → Divides by 2^n
+
+python
+Copy
+Edit
+print(20 >> 2)  # 20 / 2^2 = 5
+
+
+The for loop is used to iterate over sequences (like lists, tuples, strings) or any iterable object.
+
+List comprehension provides a concise way to create lists by embedding a for loop inside square brackets [].
+new_list = [expression for item in iterable if condition]
+
+
+A dictionary in Python is a collection of key-value pairs. Each key is unique and maps to a specific value, 
+making it a useful structure for storing data in a key-accessible format.
+
+
+You can create dictionaries using dictionary comprehension, which is similar to list comprehension.
+
+
+Functions are reusable blocks of code that perform a specific task. 
+They help to avoid repetition and keep the code organized.
+
+
+A function is a block of code designed to perform a specific operation. It can take input 
+(called arguments), process it, and return a result.
+
+Why Functions?
+Reusability: You can call the same function multiple times with different inputs.
+Modularity: Functions make code more organized and easier to maintain.
+Clarity: Breaking down complex problems into smaller functions improves readability.
+
+
+After defining a function, you call it by using its name followed by parentheses.
+
+The return keyword allows a function to send back a value when called.
