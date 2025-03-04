@@ -564,12 +564,12 @@
 # with open("write.txt", 'w') as file:
 #     file.write("Hello, I'm learning python at oic hub")
 
-import requests
-response = requests.get("https://jsonplaceholder.typicode.com/posts")
-if response.status_code == 200:
-    print(response.json())
-else:
-    print(f"Request failed with status code: {response.status_code}")
+# import requests
+# response = requests.get("https://jsonplaceholder.typicode.com/posts")
+# if response.status_code == 200:
+#     print(response.json())
+# else:
+#     print(f"Request failed with status code: {response.status_code}")
 
 
 
